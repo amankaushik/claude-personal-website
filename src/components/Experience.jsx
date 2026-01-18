@@ -96,11 +96,11 @@ function Experience() {
   ]
 
   return (
-    <section className="section experience-section">
+    <section className="section experience-section animate-on-scroll">
       <h2 className="section-title">Experience</h2>
       <div className="timeline">
         {experiences.map((job, index) => (
-          <div key={index} className="timeline-item">
+          <div key={index} className={`timeline-item animate-slide-${index % 2 === 0 ? 'left' : 'right'}`}>
             <div className="timeline-marker"></div>
             <div className="timeline-content">
               <div className="job-header">
