@@ -321,6 +321,21 @@
   border-bottom: 3px solid var(--primary-color);
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.skill-category-title {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  border-left: 2px solid var(--primary-color);
+  padding-left: 0.75rem;
+}
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -583,6 +598,11 @@
 
 
 
+
+  strong {
+    color: #93c5fd;
+    font-weight: 600;
+  }
 
   /* Reduce gap between marker/line and content */
   .timeline-content {

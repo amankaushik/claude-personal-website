@@ -5,8 +5,8 @@ function About() {
     <section className="section about-section animate-on-scroll">
       <h2 className="section-title">About</h2>
       <p className="about-text">
-        Software Engineer with 8 years of professional experience, in the US and India.
-        Last 5 years at Amazon US, building workforce automation and cost optimization systems;
+        Software Engineer with <strong>8 years of professional experience</strong>, in the US and India.
+        Last <strong>5 years at Amazon</strong> US, building <strong>workforce automation</strong> and cost optimization systems;
         leading, hiring and developing the best engineers.
       </p>
     </section>
