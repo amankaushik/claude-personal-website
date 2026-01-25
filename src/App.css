@@ -481,22 +481,19 @@ strong {
 /* Ensure timeline line doesn't persist beyond last item visually if needed, though hidden overflow handles */
 
 .timeline-content {
-  background: var(--bg-tertiary);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-left: 3px solid var(--primary-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  background: transparent;
+  padding: 0;
+  /* padding-left: 1.5rem; Removed for alignment */
+  border: none;
+  box-shadow: none;
   transition: var(--transition);
   position: relative;
-  overflow: hidden;
 }
 
 .timeline-item:hover .timeline-content {
-  transform: translateX(4px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-  border-left-color: var(--accent-blue);
-  background: var(--bg-card-hover);
+  transform: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 .job-header {
@@ -561,11 +558,11 @@ strong {
 
 .highlight-item {
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 0;
   padding-left: 1rem;
-  border-left: 3px solid var(--accent-blue);
-  background: var(--highlight-bg);
-  border-radius: 8px;
+  border-left: 2px solid var(--accent-blue);
+  background: transparent;
+  border-radius: 0;
   transition: var(--transition);
 }
 
@@ -574,9 +571,10 @@ strong {
 }
 
 .highlight-item:hover {
-  background: rgba(14, 165, 233, 0.15);
-  transform: translateX(4px);
-  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+  border-left-color: var(--primary-color);
 }
 
 .highlight-title {
@@ -674,6 +672,7 @@ strong {
 
   .achievements li::before {
     /* Keep marker but ensure it fits */
+    /* content: "•"; */
   }
 }
 

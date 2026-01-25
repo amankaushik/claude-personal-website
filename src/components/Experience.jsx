@@ -10,24 +10,34 @@ function Experience() {
         {
           title: 'Software Development Engineer II',
           period: 'July 2022 - Present',
-          highlights: [
-            {
-              title: 'Conversion',
-              description: <>Led a team of 5 engineers to build a scalable internal transfer system that reduced average associate conversion time from 30 min to 90s. A <strong>95% reduction</strong>, saving <strong>2000+ business hours</strong> per year. This was an asynchronous lambda-based solution processing <strong>5K conversions</strong> per request reducing manual ToT (time-on-task) by <strong>78%</strong>.</>
-            },
-            {
-              title: 'Self Service UI',
-              description: <>Automated the process of expanding the transfer product to a new business and associate population. Saving an average of <strong>6 weeks per expansion</strong> for an average of <strong>24 weeks per year</strong> in development time.</>
-            },
-            {
-              title: 'Event Driven Data Vending',
-              description: 'Led a team of 3 engineers to design and build an event driven data vending system allowing downstream systems to receive real time events. The system also allowed new clients to be onboard within a few hours.'
-            },
-            {
-              title: 'Labor Planning Automation',
-              description: <>Integrated with an internal system to create a two way data sharing system consisting of async state machines and synchronous APIs backed by API gateway scaling to <strong>120+ burst TPS</strong>. The system served both business and associates, saving <strong>1500+ of business hours</strong> per year by eliminating manual planning work and providing heatmaps to associates resulting in more informed transfer decisions.</>
-            }
+          description: 'Led end-to-end delivery of high-impact business features, managing teams of 2-5 engineers. Responsibilities included design, planning, development, and cross-team collaboration. Key projects include:'
+        },
+        {
+          title: 'Conversion',
+          achievements: [
+            <>Led a team of 5 engineers to build a scalable internal transfer system that reduced average associate conversion time from 30 min to 90s. A <strong>95% reduction</strong>, saving <strong>2000+ business hours</strong> per year. This was an asynchronous lambda-based solution processing <strong>5K conversions</strong> per request reducing manual ToT (time-on-task) by <strong>78%</strong>.</>
           ]
+        },
+        {
+          title: 'Self Service UI',
+          achievements: [
+            <>Automated the process of expanding the transfer product to a new business and associate population. Saving an average of <strong>6 weeks per expansion</strong> for an average of <strong>24 weeks per year</strong> in development time.</>
+          ]
+        },
+        {
+          title: 'Event Driven Data Vending',
+          achievements: [
+            'Led a team of 3 engineers to design and build an event driven data vending system allowing downstream systems to receive real time events. The system also allowed new clients to be onboard within a few hours.'
+          ]
+        },
+        {
+          title: 'Labor Planning Automation',
+          achievements: [
+            <>Integrated with an internal system to create a two way data sharing system consisting of async state machines and synchronous APIs backed by API gateway scaling to <strong>120+ burst TPS</strong>. The system served both business and associates, saving <strong>1500+ of business hours</strong> per year by eliminating manual planning work and providing heatmaps to associates resulting in more informed transfer decisions.</>
+          ]
+        },
+        {
+          description: "Spearheaded operational and engineering excellence by improving system performance and establishing team-wide standards for code reviews, design processes, and performance testing."
         },
         {
           title: 'Performance',
@@ -110,19 +120,9 @@ function Experience() {
               </div>
               {job.roles.map((role, roleIndex) => (
                 <div key={roleIndex} className="role">
-                  <h4 className="role-title">{role.title}</h4>
+                  {role.title && <h4 className="role-title">{role.title}</h4>}
                   {role.period && <span className="role-period">{role.period}</span>}
                   {role.description && <p className="role-description">{role.description}</p>}
-                  {role.highlights && (
-                    <div className="highlights">
-                      {role.highlights.map((highlight, hIndex) => (
-                        <div key={hIndex} className="highlight-item">
-                          <h5 className="highlight-title">{highlight.title}</h5>
-                          <p className="highlight-description">{highlight.description}</p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                   {role.achievements && (
                     <ul className="achievements">
                       {role.achievements.map((achievement, aIndex) => (
