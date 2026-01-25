@@ -382,6 +382,7 @@
   background: var(--bg-card);
   border: 1px solid rgba(59, 130, 246, 0.2);
   padding: 2rem;
+  padding-left: 2.5rem;
   border-radius: var(--border-radius-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -405,21 +406,9 @@
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg,
-      var(--primary-color) 0%,
-      var(--accent-blue) 50%,
-      var(--secondary-light) 100%);
-}
 
 .timeline-item {
   position: relative;
@@ -430,23 +419,7 @@
   margin-bottom: 0;
 }
 
-.timeline-marker {
-  position: absolute;
-  left: -2.625rem;
-  top: 0.25rem;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50%;
-  background: var(--primary-color);
-  border: 3px solid var(--bg-primary);
-  box-shadow: 0 0 0 3px var(--primary-color);
-  transition: var(--transition);
-}
 
-.timeline-item:hover .timeline-marker {
-  transform: scale(1.15);
-  box-shadow: 0 0 0 4px var(--primary-light);
-}
 
 /* Ensure timeline line doesn't persist beyond last item visually if needed, though hidden overflow handles */
 
@@ -604,29 +577,16 @@
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 0.5rem;
-    /* Reduced from 2rem to save space */
+    padding-left: 0;
     border-left: none;
-    /* Rely on strict positioning */
   }
 
-  .timeline::before {
-    left: 0;
-    width: 2px;
-  }
 
-  /* Adjust marker to sit on the line */
-  .timeline-marker {
-    left: -0.4rem;
-    /* Adjusted to align with new timeline position */
-    width: 1rem;
-    height: 1rem;
-  }
+
 
   /* Reduce gap between marker/line and content */
   .timeline-content {
-    margin-left: 1rem;
-    /* Reduced margin */
+    margin-left: 0;
     padding: 1rem;
   }
 
@@ -664,16 +624,10 @@
     /* Minimal padding on very small screens */
   }
 
-  .timeline-marker {
-    left: -0.3rem;
-    /* Tighter alignment */
-    width: 0.75rem;
-    height: 0.75rem;
-  }
+
 
   .timeline-content {
-    margin-left: 0.75rem;
-    /* Even tighter for narrow screens */
+    margin-left: 0;
     padding: 0.75rem;
   }
 

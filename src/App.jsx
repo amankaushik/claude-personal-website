@@ -37,8 +37,8 @@ function App() {
       <Header />
       <main className="main-content">
         <About />
-        <Skills />
         <Experience />
+        <Skills />
       </main>
       <footer className="footer">
         <p>&copy; 2026 Aman Kaushik. All rights reserved.</p>
