@@ -1,13 +1,13 @@
 import React from 'react'
 
-function Header() {
+function Header({ theme, toggleTheme }) {
   return (
     <header className="header">
       <div className="header-content">
         <div className="header-main">
           <h1 className="name">Aman Kaushik</h1>
           <p className="tagline">Software Engineer</p>
-          <p className="specialization" style={{ color: '#93c5fd', marginBottom: '1rem', fontSize: '1.1rem' }}>Specializing in High-Scale AWS Systems</p>
+          <p className="specialization" style={{ color: '#2563eb', marginBottom: '1rem', fontSize: '1.1rem' }}>Specializing in High-Scale AWS Systems</p>
           <p className="education" style={{ fontSize: '0.9rem', opacity: '0.8' }}>Arizona State University • M.S - Software Engineering • CGPA: 3.97</p>
         </div>
         <div className="header-links">

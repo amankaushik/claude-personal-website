@@ -2,69 +2,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Sora:wght@700&display=swap');
 
 :root {
-  /* Professional color palette - Subtle blues and grays */
+  /* Common variables */
+  /* Import modern display fonts with optimized loading */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Sora', 'Space Grotesk', sans-serif;
+
+  /* Border radius */
+  --border-radius: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 32px;
+
+  /* Transitions */
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Light Theme (Default) */
+:root[data-theme="light"] {
+  /* Colors */
   --primary-color: #2563eb;
   --primary-light: #3b82f6;
   --primary-dark: #1e40af;
   --secondary-color: #475569;
-  --secondary-light: #64748b;
-  --secondary-dark: #334155;
 
-  /* Accent colors - Professional palette */
+  /* Accent colors */
   --accent-blue: #0ea5e9;
-  --accent-slate: #64748b;
-  --accent-gray: #6b7280;
-  --accent-navy: #1e3a8a;
-  --accent-teal: #0d9488;
 
-  /* Gradient definitions - Subtle and professional */
-  --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  --gradient-secondary: linear-gradient(135deg, #475569 0%, #64748b 100%);
-  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
-  --gradient-subtle: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  --gradient-navy: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  --gradient-light: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  /* Text colors */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #64748b;
 
-  /* Text colors - Light for dark theme */
+  /* Background colors */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.5);
+  --glass-border: rgba(0, 0, 0, 0.1);
+
+  /* Component Colors */
+  --skill-tag-bg: rgba(37, 99, 235, 0.1);
+  --skill-tag-border: rgba(37, 99, 235, 0.2);
+  --skill-tag-text: #1e3a8a;
+  --company-name-color: #1e40af;
+  --role-title-color: #2563eb;
+  --highlight-bg: rgba(14, 165, 233, 0.1);
+  --highlight-border: var(--accent-blue);
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  /* Colors */
+  --primary-color: #3b82f6;
+  --primary-light: #60a5fa;
+  --primary-dark: #2563eb;
+  --secondary-color: #94a3b8;
+
+  /* Accent colors */
+  --accent-blue: #38bdf8;
+
+  /* Text colors */
   --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
   --text-light: #94a3b8;
 
-  /* Background colors - Dark theme */
+  /* Background colors */
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
   --bg-card: #1e293b;
   --bg-card-hover: #334155;
 
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
 
-  /* Enhanced shadows with color */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 16px 32px rgba(0, 0, 0, 0.15);
-  --shadow-xl: 0 24px 48px rgba(0, 0, 0, 0.2);
-  --shadow-colored-blue: 0 8px 24px rgba(59, 130, 246, 0.3);
-  --shadow-colored-purple: 0 8px 24px rgba(139, 92, 246, 0.3);
-  --shadow-colored-pink: 0 8px 24px rgba(236, 72, 153, 0.3);
-
-  /* Border radius - more dramatic */
-  --border-radius: 16px;
-  --border-radius-lg: 24px;
-  --border-radius-xl: 32px;
-
-  /* Transitions - varied timing */
-  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  /* Font stacks */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Sora', 'Space Grotesk', sans-serif;
+  /* Component Colors */
+  --skill-tag-bg: rgba(59, 130, 246, 0.1);
+  --skill-tag-border: rgba(59, 130, 246, 0.3);
+  --skill-tag-text: #93c5fd;
+  --company-name-color: #93c5fd;
+  --role-title-color: #60a5fa;
+  --highlight-bg: rgba(14, 165, 233, 0.1);
+  --highlight-border: var(--accent-blue);
 }
 
 * {
@@ -76,13 +106,14 @@
 body {
   font-family: var(--font-primary);
   font-weight: 400;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background: var(--bg-primary);
-  line-height: 1.6;
+  line-height: 1.75;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
@@ -98,8 +129,8 @@ h5,
 h6 {
   font-family: var(--font-display);
   line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 a {
