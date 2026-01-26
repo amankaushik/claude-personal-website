@@ -30,6 +30,8 @@ strong {
   /* Ensure padding is included in width */
   overflow-x: hidden;
   /* Prevent horizontal scroll from internal elements */
+  text-align: center;
+  /* Center align text for desktop */
 }
 
 .header-main {
@@ -58,7 +60,8 @@ strong {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: flex-start;
+  justify-content: center;
+  /* Center align links */
 }
 
 
