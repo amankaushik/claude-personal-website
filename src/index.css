@@ -4,8 +4,9 @@
 :root {
   /* Common variables */
   /* Import modern display fonts with optimized loading */
+  /* Consolidating to single font */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: 'Sora', 'Space Grotesk', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
   /* Border radius */
   --border-radius: 16px;
