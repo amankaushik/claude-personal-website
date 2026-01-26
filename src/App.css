@@ -374,8 +374,8 @@ strong {
   font-size: 1.1rem;
   margin-bottom: 1rem;
   font-weight: 500;
-  border-left: 2px solid var(--primary-color);
-  padding-left: 0.75rem;
+  /* border-left: 2px solid var(--primary-color); */
+  /* padding-left: 0.75rem; */
 }
 
 .skills-grid {
@@ -417,9 +417,8 @@ strong {
   .skill-tag {
     font-size: 0.8125rem;
     padding: 0.5rem 0.8rem;
-    flex-grow: 1;
-    /* Make tags grow to fill space allows for better touch targets */
-    text-align: center;
+    /* flex-grow: 1; Removed to keep tags fit-content */
+    /* text-align: center; */
   }
 }
 

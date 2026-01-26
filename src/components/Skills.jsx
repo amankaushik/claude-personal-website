@@ -4,7 +4,7 @@ function Skills() {
   const skillCategories = [
     {
       title: 'Languages',
-      skills: ['Java', 'Python', 'C++', 'TypeScript', 'ReactJS', 'SQL']
+      skills: ['Java', 'Python', 'C++', 'TypeScript', 'ReactJS', 'GraphQL', 'SQL']
     },
     {
       title: 'AWS Cloud',
@@ -12,7 +12,7 @@ function Skills() {
     },
     {
       title: 'Tools & Practices',
-      skills: ['CI/CD', 'GraphQL', 'Jest', 'Mockito']
+      skills: ['CI/CD', 'Jest', 'Mockito']
     }
   ]
 
